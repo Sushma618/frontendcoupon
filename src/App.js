@@ -8,7 +8,7 @@ function App() {
 
   const getCoupon = async () => {
     try {
-      const response = await axios.get('/api/get-coupon'); // ✅ Use relative path
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/get-coupon`);
       setCoupon(response.data.coupon);
       setError(null);
     } catch (err) {
@@ -48,3 +48,4 @@ const styles = {
 };
 
 export default App;
+
