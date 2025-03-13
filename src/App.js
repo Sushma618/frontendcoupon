@@ -13,7 +13,7 @@ function App() {
       setError(null);
     } catch (err) {
       setCoupon(null);
-      setError(err.response?.data?.message || 'An error occurred');
+      setError(err.response?.data?.message || 'An error occurred.');
     }
   };
 
